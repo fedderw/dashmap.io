@@ -7,10 +7,11 @@ from .callbacks.util.helpers import *
 from .callbacks.accordions.init_accordions import init_all_accordions
 
 from .callbacks.tab_census.census_callbacks import init_census_callbacks
-from .callbacks.tab_real_estate.real_estate_callbacks import init_re_callbacks
-from .callbacks.tab_services.services_callbacks import init_services_callbacks
-from .callbacks.tab_mobility.mobility_callbacks import init_mobility_callbacks
-from .callbacks.tab_environment.environment_callbacks import init_env_callbacks
+
+# from .callbacks.tab_real_estate.real_estate_callbacks import init_re_callbacks
+# from .callbacks.tab_services.services_callbacks import init_services_callbacks
+# from .callbacks.tab_mobility.mobility_callbacks import init_mobility_callbacks
+# from .callbacks.tab_environment.environment_callbacks import init_env_callbacks
 
 
 # Load datasets
@@ -31,9 +32,7 @@ def init_callbacks(dash_app: dash.callback_context) -> None:
 
     # Dashboards
     init_census_callbacks(dash_app, datum)
-    init_re_callbacks(dash_app, real_estate)
-    init_services_callbacks(dash_app, datum)
-    init_mobility_callbacks(dash_app, datum)
-    init_env_callbacks(dash_app)
-
- 
+    # init_re_callbacks(dash_app, real_estate)
+    # init_services_callbacks(dash_app, datum)
+    # init_mobility_callbacks(dash_app, datum)
+    # init_env_callbacks(dash_app)

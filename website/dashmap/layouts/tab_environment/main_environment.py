@@ -10,21 +10,25 @@ def init_tab_environment() -> object:
     Initialize the environment tab.
     Args: None
 
-    Returns: 
+    Returns:
         environment_tab_content (object): dash dbc.Card() that contains all relevant accordions
     """
     environment_accordion = init_environment_accordion()
 
     environment_tab_content = dbc.Card(
         dbc.CardBody(
-            [   
-                html.H2("Environment", style={'marginBottom': 10, 'marginTop': 1}),
-                html.P("""
+            [
+                html.H2(
+                    "Environment", style={"marginBottom": 10, "marginTop": 1}
+                ),
+                html.P(
+                    """
                 The  environment refers to the environmental conditions created as byproduct
                 of man-made and natural processes. It includes metrics like pollution, noise, 
                 wind patterns and radiation levels.
                 """,
-                       className="card-text"),
+                    className="card-text",
+                ),
                 html.Div(environment_accordion),
             ]
         ),
